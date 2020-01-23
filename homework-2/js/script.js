@@ -22,6 +22,7 @@ let appData = {
     appData.expenses[a] = b;
   } else {
     console.log('Неверные данные');
+    i--;
   }
 
 } */
@@ -37,6 +38,7 @@ while (i < 2) {
     appData.expenses[a] = b;
   } else {
     console.log('Неверные данные');
+    i--;
   }
   i++;
 } */
@@ -53,6 +55,7 @@ do {
     appData.expenses[a] = b;
   } else {
     console.log('Неверные данные');
+    i--;
   }
   i++;
 } while (i < 2);
