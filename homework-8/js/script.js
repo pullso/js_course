@@ -40,4 +40,6 @@ btnBlock.addEventListener('click', function(event) {
 	if (event.target && event.target.matches('button.first')) {
 		console.log('Hello');
 	}
+
+	//ES6
 });
