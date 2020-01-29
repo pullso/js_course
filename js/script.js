@@ -1,35 +1,57 @@
-'use strict';
+// 'use strict';
 
-// let ans = prompt('Введите ваше имя');
-// let reg = /n/gi;
-//console.log(ans.search(reg));
-// console.log(ans.match(reg));
-//console.log(reg.test(ans));
+// function showThis(a, b) {
+// 	console.log(this);
+// 	function sum() {
+// 		console.log(this);
+// 		return a + b;
+// 	}
+// 	console.log(sum());
+// }
 
-//i - регистр
-//g - глобальность
-//m - многострочность
+// showThis(4, 5);
+// showThis(5, 5);
 
-// \d
-// \w
-// \s
-// let pass = prompt('Введите пароль:', '');
-// console.log(pass.replace(/./g, '*'));
-// alert('12-34-56'.replace(/-/g, ':'));
+// let obj = {
+// 	a: 20,
+// 	b: 15,
+// 	sum: function() {
+// 		console.log(this);
+// 	},
+// };
 
-// let ans = prompt('Введите число');
-// let reg = /\d/gi;
-// console.log(ans.match(reg));
+// // obj.sum();
 
-// let str = 'My name is R2D2';
-// console.log(str.match(/\w\d\w\d/i));
+// let user = {
+// 	name: 'John',
+// };
 
-// let timerId = setTimeout(sayHello, 3000);
-// clearTimeout(timerId);
+// function sayName(surname) {
+// 	console.log(this);
+// 	console.log(this.name + surname);
+// }
 
-let timerId = setInterval(sayHello, 3000);
-// clearTimeout(timerId);
+// console.log(sayName.call(user, 'Smith'));
+// console.log(sayName.apply(user, ['Snow']));
 
-function sayHello() {
-	console.log('hello world');
-}
+// function count(number) {
+// 	return this * number;
+// }
+
+// let double = count.bind(2);
+// console.log(double(3));
+// console.log(double(10));
+
+// let age = document.getElementById('age');
+// function showUser(surname, name) {
+// 	alert('Пользователь ' + surname + ' ' + name + ', его возраст ' + age.value);
+// }
+// showUser('Иванов', 'Петр');
+
+// 'use strict';
+
+// function hello() {
+// 	console.log(this);
+// }
+
+// hello();
