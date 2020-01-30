@@ -174,36 +174,50 @@
 // 		}
 // 	});
 // });
-let drink = 0;
+// let drink = 0;
 
-function shoot(arrow) {
-	console.log('Вы сделали выстрел');
-	let promise = new Promise(function(resolve, reject) {
-		setTimeout(function() {
-			Math.random() > 0.5 ? resolve({}) : reject('Вы промахнулись');
-		}, 3000);
-	});
-	return promise;
-}
+// function shoot(arrow) {
+// 	console.log('Вы сделали выстрел');
+// 	let promise = new Promise(function(resolve, reject) {
+// 		setTimeout(function() {
+// 			Math.random() > 0.5 ? resolve({}) : reject('Вы промахнулись');
+// 		}, 3000);
+// 	});
+// 	return promise;
+// }
 
-function win() {
-	console.log('Вы победили');
-	drink == 1 ? byBeer() : giveMoney();
-}
+// function win() {
+// 	console.log('Вы победили');
+// 	drink == 1 ? byBeer() : giveMoney();
+// }
 
-function byBeer() {
-	console.log('Вам купили пиво');
-}
+// function byBeer() {
+// 	console.log('Вам купили пиво');
+// }
 
-function giveMoney() {
-	console.log('Вам дали денег');
-}
+// function giveMoney() {
+// 	console.log('Вам дали денег');
+// }
 
-function loose() {
-	console.log('Вы проиграли');
-}
+// function loose() {
+// 	console.log('Вы проиграли');
+// }
 
-shoot({})
-	.then(mark => console.log('Вы попали в цель'))
-	.then(win)
-	.catch(loose);
+// shoot({})
+// 	.then(mark => console.log('Вы попали в цель'))
+// 	.then(win)
+// 	.catch(loose);
+
+// localStorage.setItem('number', 1);
+// console.log(localStorage.getItem('number'));
+// localStorage.removeItem('number');
+// localStorage.clear();
+
+// try {
+// 	console.log('Normal');
+// 	console.log(a);
+// } catch (error) {
+// 	console.log(`Мы получили ошибку  ${error.name}`);
+// }
+// console.log('А я буду работать дальше');
+
