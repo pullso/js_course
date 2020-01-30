@@ -148,29 +148,62 @@
 
 // console.log(JSON.parse(JSON.stringify(options)));
 
-let inputRub = document.getElementById('rub'),
-	inputUsd = document.getElementById('usd');
+// let inputRub = document.getElementById('rub'),
+// 	inputUsd = document.getElementById('usd');
 
-inputRub.addEventListener('input', () => {
-	let request = new XMLHttpRequest();
+// inputRub.addEventListener('input', () => {
+// 	let request = new XMLHttpRequest();
 
-	// request.open(method, url, async, login, pass);
+// request.open(method, url, async, login, pass);
 
-	request.open('GET', 'js/current.json');
-	request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
-	request.send();
+// request.open('GET', 'js/current.json');
+// request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+// request.send();
 
-	//status
-	//statusText
-	//responseText / response
-	//readyState
+//status
+//statusText
+//responseText / response
+//readyState
 
-	request.addEventListener('readystatechange', function() {
-		if (request.readyState === 4 && request.status == 200) {
-			let data = JSON.parse(request.response);
-			inputUsd.value = inputRub.value / data.usd;
-		} else {
-			inputUsd.value = 'Что-то пошло не так';
-		}
+// 	request.addEventListener('readystatechange', function() {
+// 		if (request.readyState === 4 && request.status == 200) {
+// 			let data = JSON.parse(request.response);
+// 			inputUsd.value = inputRub.value / data.usd;
+// 		} else {
+// 			inputUsd.value = 'Что-то пошло не так';
+// 		}
+// 	});
+// });
+let drink = 0;
+
+function shoot(arrow) {
+	console.log('Вы сделали выстрел');
+	let promise = new Promise(function(resolve, reject) {
+		setTimeout(function() {
+			Math.random() > 0.5 ? resolve({}) : reject('Вы промахнулись');
+		}, 3000);
 	});
-});
+	return promise;
+}
+
+function win() {
+	console.log('Вы победили');
+	drink == 1 ? byBeer() : giveMoney();
+}
+
+function byBeer() {
+	console.log('Вам купили пиво');
+}
+
+function giveMoney() {
+	console.log('Вам дали денег');
+}
+
+function loose() {
+	console.log('Вы проиграли');
+}
+
+shoot({})
+	.then(mark => console.log('Вы попали в цель'))
+	.then(win)
+	.catch(loose);
